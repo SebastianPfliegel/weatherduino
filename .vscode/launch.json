@@ -1,0 +1,77 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": "serialapi",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/serialapi/bin/Debug/netcoreapp2.1/serialapi.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/serialapi",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}/api/temperature",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}/api/temperature"
+                },
+                "osx": {
+                    "command": "open"
+                },
+                "linux": {
+                    "command": "xdg-open"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "linux": {
+                "env": {
+                    "LD_LIBRARY_PATH": "/home/sebastian/Software/serialportstream/dll/serialunix/bin/usr/local/lib64:${LD_LIBRARY_PATH}"
+                }
+            }
+        },
+        {
+            "name": "app Main Process",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
+            },
+            "program": "${workspaceFolder}/src/app/dist/main.js",
+            "protocol": "inspector"
+        },
+        {
+            "name": "app Renderer Process",
+            "type": "chrome",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
+            },
+            "runtimeArgs": [
+                "${workspaceFolder}/src/app/dist/main.js",
+                "--remote-debugging-port=9222"
+            ],
+            "webRoot": "${workspaceFolder}"
+        }
+    ,],
+    "compounds": [
+        {
+            "name": "Server/Client",
+            "configurations": ["serialapi", "app Renderer Process"]
+        }
+    ]
+}
