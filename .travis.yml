@@ -1,18 +1,8 @@
-language: csharp
-mono: none
-dotnet: 2.1.301
-
-before_install:
-  - git submodule update --init --recursive
-  - git clone --depth 1 https://github.com/creationix/nvm.git ./.nvm
-  - source ./.nvm/nvm.sh
-  - nvm install
-  - nvm use
+language: node_js
 
 install:
-  - dotnet restore
-  - npm install
+  - npm --prefix ./api install
+
 script:
-  - dotnet build
-  - npm run lint
-  - npm run build
+  - npm --prefix ./api run lint
+  - npm --prefix ./api run build
