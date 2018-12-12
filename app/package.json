@@ -1,26 +1,19 @@
 {
-  "name": "weatherduino",
-  "version": "0.1.0",
+  "name": "weatherduino_app",
+  "version": "0.0.1",
   "description": "",
+  "main": "src/main.ts",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "start": "electron .",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./src/app/dist/main.js"
+    "make": "electron-forge make",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SebastianPfliegel/weatherduino.git"
   },
-  "keywords": [
-    "weatherduino",
-    "typescript",
-    "javascript",
-    "electron",
-    "arduino",
-    "serial",
-    "json"
-  ],
+  "keywords": [],
   "author": "Sebastian Pfliegel",
   "license": "MIT",
   "bugs": {
@@ -28,11 +21,18 @@
   },
   "homepage": "https://github.com/SebastianPfliegel/weatherduino#readme",
   "devDependencies": {
-    "electron": "^2.0.5",
+    "@types/electron-devtools-installer": "^2.2.0",
+    "electron": "^3.0.11",
+    "electron-forge": "^5.2.3",
+    "electron-prebuilt-compile": "^3.0.10",
     "tslint": "^5.11.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.2.2"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "electron-compile": "^6.4.3",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "vue": "^2.5.21",
+    "vueify": "^9.4.1"
   }
 }
