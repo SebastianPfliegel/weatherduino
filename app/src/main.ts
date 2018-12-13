@@ -8,24 +8,23 @@ if (isDevMode) {
     enableLiveReload();
 }
 
-let window: Electron.BrowserWindow | null;
+let mainWindow: Electron.BrowserWindow | null;
 
-const createWindow = async () => {
-    window = new BrowserWindow({
-        darkTheme: true,
+async function createWindow() {
+    mainWindow = new BrowserWindow({
         height: 768,
         width: 1024,
     });
-    window.loadFile(path.join(__dirname, "./index.html"));
+    mainWindow.loadFile(path.join(__dirname, "./index.html"));
 
     if (isDevMode) {
         await installExtension(VUEJS_DEVTOOLS);
     }
 
-    window.on("closed", () => {
-        window = null;
+    mainWindow.on("closed", () => {
+        mainWindow = null;
     });
-};
+}
 
 app.on("ready", createWindow);
 

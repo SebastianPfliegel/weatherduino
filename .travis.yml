@@ -6,3 +6,8 @@ matrix:
       script:
         - npm --prefix ./api run lint
         - npm --prefix ./api run build
+    - language: node_js
+      install:
+        - npm --prefix ./app install
+      script:
+        - npm --prefix ./app run lint
