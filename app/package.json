@@ -22,7 +22,7 @@
   "homepage": "https://github.com/SebastianPfliegel/weatherduino#readme",
   "devDependencies": {
     "@types/electron-devtools-installer": "^2.2.0",
-    "electron": "^3.0.11",
+    "electron": "^3.0.12",
     "electron-forge": "^5.2.3",
     "electron-prebuilt-compile": "^3.0.10",
     "tslint": "^5.11.0",
