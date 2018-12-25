@@ -12,4 +12,5 @@ matrix:
       script:
         - npm --prefix ./app run lint
         - npm --prefix ./app run test:unit
+        - npm --prefix ./app run build
         - npm --prefix ./app run electron:build
