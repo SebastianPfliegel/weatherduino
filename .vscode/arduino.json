@@ -1,5 +1,5 @@
 {
-    "sketch": "src/sensor/sensor.ino",
+    "sketch": "sensor/src/sensor.ino",
     "board": "arduino:avr:nano",
     "configuration": "cpu=atmega328old",
     "port": "/dev/ttyUSB0"
