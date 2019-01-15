@@ -24,21 +24,21 @@
   },
   "homepage": "https://github.com/SebastianPfliegel/weatherduino#readme",
   "dependencies": {
-    "vue": "^2.5.21",
+    "vue": "^2.5.22",
     "vue-class-component": "^6.3.2",
-    "vue-property-decorator": "^7.2.0"
+    "vue-property-decorator": "^7.3.0"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
-    "@vue/cli-plugin-typescript": "^3.2.2",
-    "@vue/cli-plugin-unit-mocha": "^3.2.2",
-    "@vue/cli-service": "^3.2.2",
+    "@vue/cli-plugin-typescript": "^3.3.0",
+    "@vue/cli-plugin-unit-mocha": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
     "@vue/test-utils": "^1.0.0-beta.28",
     "chai": "^4.2.0",
-    "electron": "^4.0.0",
+    "electron": "^4.0.1",
     "typescript": "^3.2.2",
     "vue-cli-plugin-electron-builder": "^1.0.0-rc.10",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.22"
   }
 }
