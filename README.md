@@ -12,4 +12,5 @@ This is a short sample project done quick by popular demand of my colleagues in 
 
 1. `Arduino` Nano + DHT22 Temperature/Humidity sensor
 2. `Node/Express` RESTful API as provider of the indoor sensor values
-3. `Electron` app as consumer of the JSON API
+3. `Vue.js` app as consumer of the JSON API
+
