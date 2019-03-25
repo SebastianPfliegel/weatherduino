@@ -6,6 +6,19 @@
     "configurations": [
         {
             "type": "node",
+            "request": "launch",
+            "name": "Api: Launch",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "--prefix",
+                "./api",
+                "run",
+                "debug"
+            ],
+            "port": 5858
+        },
+        {
+            "type": "node",
             "request": "attach",
             "name": "Api: Attach",
             "port": 5858
