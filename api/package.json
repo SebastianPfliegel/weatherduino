@@ -4,11 +4,10 @@
   "description": "",
   "main": "./src/server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --inspect=5858 -r ts-node/register ./src/server.ts",
-    "start:watch": "nodemon",
-    "debug": "node --inspect-brk=5858 -r ts-node/register ./src/server.ts",
-    "build": "tsc"
+    "start": "nodemon --inspect=5858 --exec babel-node src/server.js",
+    "build": "babel src -d dist",
+    "lint": "echo \"Error: no linting specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -27,10 +26,10 @@
     "serialport": "^7.1.4"
   },
   "devDependencies": {
-    "@types/node": "^11.11.6",
-    "nodemon": "^1.18.10",
-    "ts-node": "^8.0.3",
-    "tslint": "^5.14.0",
-    "typescript": "^3.3.4000"
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "nodemon": "^1.18.10"
   }
 }

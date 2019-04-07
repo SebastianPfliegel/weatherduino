@@ -13,8 +13,9 @@
                 "--prefix",
                 "./api",
                 "run",
-                "debug"
+                "start"
             ],
+            "restart": true,
             "port": 5858
         },
         {

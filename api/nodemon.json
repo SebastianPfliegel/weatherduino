@@ -3,5 +3,5 @@
         "src"
     ],
     "exec": "npm start",
-    "ext": "ts"
+    "ext": "js"
 }
