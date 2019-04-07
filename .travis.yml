@@ -4,7 +4,7 @@ matrix:
       install:
         - npm --prefix ./api install
       script:
-        #- npm --prefix ./api run lint
+        - npm --prefix ./api run lint
         #- npm --prefix ./api run test
         - npm --prefix ./api run build
     - language: node_js
