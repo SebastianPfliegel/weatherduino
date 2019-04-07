@@ -1,9 +1,12 @@
-import express from "express";
+import express from 'express';
+import apiRoutes from './routes/api';
 
 const app = express();
 
+app.use('/api', apiRoutes);
+
 app.use((req, res, next) => {
-    const err = new Error("Not found");
+    const err = new Error('Not found');
     err.status = 404;
     next(err);
 });
